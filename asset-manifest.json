@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/iop_tool/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/iop_tool/static/js/main.b292bf56.chunk.js",
+    "main.js.map": "/iop_tool/static/js/main.b292bf56.chunk.js.map",
+    "runtime-main.js": "/iop_tool/static/js/runtime-main.a161b6c0.js",
+    "runtime-main.js.map": "/iop_tool/static/js/runtime-main.a161b6c0.js.map",
+    "static/css/2.c8956ef5.chunk.css": "/iop_tool/static/css/2.c8956ef5.chunk.css",
+    "static/js/2.7605918c.chunk.js": "/iop_tool/static/js/2.7605918c.chunk.js",
+    "static/js/2.7605918c.chunk.js.map": "/iop_tool/static/js/2.7605918c.chunk.js.map",
+    "static/js/3.d8055b68.chunk.js": "/iop_tool/static/js/3.d8055b68.chunk.js",
+    "static/js/3.d8055b68.chunk.js.map": "/iop_tool/static/js/3.d8055b68.chunk.js.map",
+    "index.html": "/iop_tool/index.html",
+    "static/css/2.c8956ef5.chunk.css.map": "/iop_tool/static/css/2.c8956ef5.chunk.css.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/iop_tool/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.7605918c.chunk.js.LICENSE.txt": "/iop_tool/static/js/2.7605918c.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/iop_tool/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a161b6c0.js",
+    "static/css/2.c8956ef5.chunk.css",
+    "static/js/2.7605918c.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.b292bf56.chunk.js"
+  ]
+}
