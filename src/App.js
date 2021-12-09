@@ -23,8 +23,10 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log('You clicked submit.');
-    console.log(startDate);
-    console.log(endDate);
+    var startingDate = new Date(startDate);
+    var endingDate = new Date(endDate);
+    console.log(startingDate.getTime());
+    console.log(endingDate.getTime());
 
     var JSZip = require("jszip");
     var zip = new JSZip();
@@ -37,7 +39,8 @@ function App() {
       "operation": "GET_LIST",
       "data": {
         "where": {
-          "entityType": "player_log"
+          "entityType": "player_log",
+          "updatedAt": { "$gte" : startingDate.getTime(), "$lte" : endingDate.getTime()},
         },
         "orderBy": {
 
@@ -45,6 +48,8 @@ function App() {
         "maxReturn": -1
       }
     };
+
+    console.log(json);
 
     var url = "https://sharedprod.braincloudservers.com/s2sdispatcher";
 
@@ -56,6 +61,7 @@ function App() {
       },
       json: json
     }, function (error, response, body) {
+      console.log(response);
       if (!error && response.statusCode === 200) {
         var entityList = body['entityList'];
         entityList.forEach(element => {
@@ -66,7 +72,8 @@ function App() {
 
         zip.generateAsync({ type: "blob" })
           .then(function (content) {
-            saveAs(content, "all_log.zip");
+            var fileName = "log_" + getShortDateString(startingDate) + "_" + getShortDateString(endingDate) +".zip";
+            saveAs(content, fileName);
           });
       }
       else {
@@ -74,6 +81,11 @@ function App() {
         console.log("response.statusCode: " + response.statusCode);
       }
     });
+
+    function getShortDateString(date) {
+      return date.toISOString().split('T')[0].replaceAll('-', '');
+    }
+
 
     function saveAs(blob, fileName) {
       const element = document.createElement("a");
