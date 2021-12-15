@@ -39,7 +39,7 @@ function App() {
       "operation": "GET_LIST",
       "data": {
         "where": {
-          "entityType": "player_log",
+          "entityType": "player_log_2",
           "updatedAt": { "$gte" : startingDate.getTime(), "$lte" : endingDate.getTime()},
         },
         "orderBy": {
